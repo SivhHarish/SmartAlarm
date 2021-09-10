@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#131b29"
+    tools:context=".MainActivity">
+
+    <TimePicker
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal = "true"
+        android:padding="10dp"
+        android:id="@+id/timePicker"
+        android:layout_marginTop="50dp"
+        android:timePickerMode="clock">
+    </TimePicker>
+
+    <TextView
+        android:id="@+id/timeTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:textColor="#ffff"
+        android:textStyle="bold"
+        android:text="Time: 00:00"
+        android:textSize="20sp">
+    </TextView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginLeft="50dp"
+        android:layout_below="@+id/timePicker"
+        android:elevation="10dp"
+        android:id="@+id/relLayout2">
+
+        <ImageView
+            android:id="@+id/setAlm"
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:background="@drawable/ro_corner"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="11dp"
+            android:clickable="true"
+            android:text="Set Alarm"/>
+
+        <TextView
+            android:id="@+id/setAlm1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginRight="40dp"
+            android:layout_marginLeft="95dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="20dp"
+            android:text="Set Alarms"
+            android:textStyle="bold"
+            android:clickable="true" />
+
+    </RelativeLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/cancel"
+        android:layout_centerHorizontal="true"
+        android:backgroundTint="#DCDCDC"
+        android:layout_marginBottom="10dp"
+        android:text="Or Set alarm using Qr code"
+        android:textColor="@color/black"
+        android:id="@+id/qr"/>
+
+    <ImageView
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:id="@+id/cancel"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:src="@drawable/ic_cancel"
+        android:clickable="true"/>
+
+
+</RelativeLayout>
